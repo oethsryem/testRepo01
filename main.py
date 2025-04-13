@@ -13,7 +13,7 @@ def get_timestamp():
     return timestamp, 200, {"Content-Type": "text/plain"}
 
 @app.route("/4")
-def get_timestamp():
+def get_timestamp2():
     now = datetime.datetime.now(datetime.timezone.utc)
     timestamp = now.isoformat()
     return timestamp, 400, {"Content-Type": "text/plain"}
