@@ -18,5 +18,10 @@ def get_timestamp2():
     timestamp = now.isoformat()
     return timestamp, 400, {"Content-Type": "text/plain"}
 
+@app.route("/runprint")
+def run_print():
+    print("Hit endpoint runprint, will print errors")
+    return "{'status':'running'}", 200, {"Content-Type": "text/plain"}
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
